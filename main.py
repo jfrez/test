@@ -21,7 +21,7 @@ Bienvenido, para continuar indique una fecha, marque si se trata de algun día e
 
 
 cuando = st.date_input("Cuando:")
-cuando = cuando.replace(hour=0, minute=0)
+st.write(cuando)
 especial = st.checkbox("Especial", value=False)
 feriado = st.checkbox("Feriado", value=False)
 fecha_inicio = cuando + timedelta(hours=10)
