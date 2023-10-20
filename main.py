@@ -29,7 +29,7 @@ fecha_fin = cuando + timedelta(hours=22)
 
 # Crear un rango de fechas y horas
 rango_horas = [fecha_inicio + timedelta(hours=x) for x in range(10)]
-
+st.write(rango_horas)
 # Crear un DataFrame
 df = pd.DataFrame({'fecha_hora': rango_horas})
 if especial:
