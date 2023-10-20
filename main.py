@@ -28,7 +28,7 @@ fecha_inicio = cuando + timedelta(hours=10)
 fecha_fin = cuando + timedelta(hours=22)
 
 # Crear un rango de fechas y horas
-rango_horas = [fecha_inicio + timedelta(hours=x) for x in range(10)]
+rango_horas = [fecha_inicio + timedelta(hours=x) for x in range(12)]
 st.write(fecha_inicio)
 # Crear un DataFrame
 df = pd.DataFrame({'fecha_hora': rango_horas})
@@ -49,6 +49,7 @@ df['hour'] = df['fecha_hora'].dt.hour
 df['day_of_week'] = df['fecha_hora'].dt.dayofweek
 df['day_of_month'] = df['fecha_hora'].dt.day
 df['day_of_year'] = df['fecha_hora'].dt.dayofyear
+df['hour'] = range(10,22)
 
 # Agregar columna para la semana del mes
 df['week_of_month'] = (df['day_of_month'] - 1) // 7 + 1
