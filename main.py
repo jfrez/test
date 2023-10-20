@@ -55,7 +55,7 @@ df['week_of_month'] = (df['day_of_month'] - 1) // 7 + 1
 
 
 df = df.drop(["fecha_hora"],axis=1)  #Eliminar datos no numericos
-
+st.dataframe(df) 
 
 if st.button('Resultados: ' ,type="primary"):
 
