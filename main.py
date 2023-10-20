@@ -30,8 +30,14 @@ rango_horas = pd.date_range(start=fecha_inicio, end=fecha_fin, freq='H')
 
 # Crear un DataFrame
 df = pd.DataFrame({'fecha_hora': rango_horas})
-df["especial"] =especial  #OJO AQUI
-df["feriado"]=feriado
+if especial:
+  df["especial"] =1  #OJO AQUI
+else:
+  df["especial"] =0
+if feriado:
+  df["feriado"] =1  #OJO AQUI
+else:
+  df["feriado"] =0
 
 # Preprocesamiento de datos
 df['fecha_hora'] = pd.to_datetime(df['fecha_hora'])
